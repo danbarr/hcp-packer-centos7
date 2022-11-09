@@ -15,7 +15,7 @@ variable "az_resource_group" {
 
 variable "department" {
   type    = string
-  default = "PMM"
+  default = "TPMM"
 }
 
 variable "owner" {
