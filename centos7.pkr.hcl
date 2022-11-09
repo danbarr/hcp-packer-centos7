@@ -53,7 +53,7 @@ source "azure-arm" "base" {
 
   #location                          = var.az_region
   build_resource_group_name         = var.az_resource_group
-  vm_size                           = "Standard_A2_v2"
+  vm_size                           = "Standard_B2s"
   managed_image_name                = local.image_name
   managed_image_resource_group_name = var.az_resource_group
 
@@ -67,9 +67,7 @@ source "azure-arm" "base" {
 build {
   hcp_packer_registry {
     bucket_name = "centos7"
-    description = <<EOT
-    CentOS 7 base images.
-    EOT
+    description = "CentOS 7 base image."
     bucket_labels = {
       "owner"          = var.owner
       "dept"           = var.department
